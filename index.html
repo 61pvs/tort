@@ -18,17 +18,20 @@
         <div class="row">
             <div class="col-md-3">
                 <h2>Введите вес торта в граммах</h2>
-                <input type="number" min="1000" max="5000" value="1000" class="ves" name="ves"> г.,вес
+                <input id="ves" type="number" min="1000" max="5000" value="1000" step="100" class="ves" name="ves" onchange="ves()"> г.,вес
                 
             </div>
             <div class="col-md-3">
                 <h2>Выберите корж</h2>
-                <input type="radio" name="korg" value= "red" checked="checked" > Красный бархат <br>
-                <input type="radio" name="korg" value= "milk" > Молочная девочка <br>
-                <input type="radio" name="korg" value= "mega" > Мегашоколад <br>
-                <input type="radio" name="korg" value= "classic" > Классический <br>
-                <input type="radio" name="korg" value= "mork" > Морковный 
+                <input type="radio" name="korg" value= "red" checked="checked" onchange="korgy()"> Красный бархат&nbsp&nbsp <span id="korgy0"></span> рублей<br>
+                <input type="radio" name="korg" value= "milk" onchange="korgy()"> Молочная девочка&nbsp&nbsp <span id="korgy1"></span> рублей<br>
+                <input type="radio" name="korg" value= "mega" onchange="korgy()"> Мегашоколад&nbsp&nbsp <span id="korgy2"></span> рублей<br>
+                <input type="radio" name="korg" value= "classic" onchange="korgy()"> Классический&nbsp&nbsp <span id="korgy3"></span> рублей<br>
+                <input type="radio" name="korg" value= "mork" onchange="korgy()"> Морковный&nbsp&nbsp <span id="korgy4"></span> рублей
 
+            </div>
+            <div class="col-md-3">
+                
             </div>
             <div class="col-md-3">
                 <h2>Выберите пропитку</h2>
@@ -98,9 +101,10 @@
     
     
       <footer>
-          <p>Конструктор торта<br/> Постнов Вячеслав</p>
+          <div>Конструктор торта</div>
       </footer>
 
-    <script src="js/bootstrap.min.js"></script>
+    <!--<script src="js/bootstrap.min.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
