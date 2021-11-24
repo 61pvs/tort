@@ -16,86 +16,92 @@
 
       <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-12">
                 <h2>Введите вес торта в граммах</h2>
                 <input id="ves" type="number" min="1000" max="5000" value="1000" step="100" class="ves" name="ves" onchange="ves()"> г.,вес
-                
             </div>
-            <div class="col-md-3">
-                <h2>Выберите корж</h2>
-                <input type="radio" name="korg" value= "red" checked="checked" onchange="korgy()"> Красный бархат&nbsp&nbsp <span id="korgy0"></span> рублей<br>
-                <input type="radio" name="korg" value= "milk" onchange="korgy()"> Молочная девочка&nbsp&nbsp <span id="korgy1"></span> рублей<br>
-                <input type="radio" name="korg" value= "mega" onchange="korgy()"> Мегашоколад&nbsp&nbsp <span id="korgy2"></span> рублей<br>
-                <input type="radio" name="korg" value= "classic" onchange="korgy()"> Классический&nbsp&nbsp <span id="korgy3"></span> рублей<br>
-                <input type="radio" name="korg" value= "mork" onchange="korgy()"> Морковный&nbsp&nbsp <span id="korgy4"></span> рублей
-
+            <div class="col-md-4">
+                <div>
+                    <h2>Выберите корж</h2>
+                    <input type="radio" name="korg" value= "red" checked="checked" onchange="korgy()"> Красный бархат&nbsp&nbsp <span id="korgy0"></span> рублей<br>
+                    <input type="radio" name="korg" value= "milk" onchange="korgy()"> Молочная девочка&nbsp&nbsp <span id="korgy1"></span> рублей<br>
+                    <input type="radio" name="korg" value= "mega" onchange="korgy()"> Мегашоколад&nbsp&nbsp <span id="korgy2"></span> рублей<br>
+                    <input type="radio" name="korg" value= "classic" onchange="korgy()"> Классический&nbsp&nbsp <span id="korgy3"></span> рублей<br>
+                    <input type="radio" name="korg" value= "mork" onchange="korgy()"> Морковный&nbsp&nbsp <span id="korgy4"></span> рублей
+                </div>
+                <div>
+                    <img id="korgy_img" src="img/korgy/red0.jpg">
+                </div>              
             </div>
-            <div class="col-md-3">
-                
-            </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2>Выберите пропитку</h2>
-                <input type="checkbox" name="propit" value= "milk" checked="checked" > Молочная <br>
-                <input type="checkbox" name="propit" value= "malin" > Малиновая <br>
-                <input type="checkbox" name="propit" value= "karamel" > Карамельная <br>
-                <input type="checkbox" name="propit" value= "egevic" > Ежевичная <br>
-                <input type="checkbox" name="propit" value= "kakao" > Какао 
-                
-            </div>
-            <div class="col-md-3">
+                <input id="chkbox" type="checkbox" name="propit" value= "milk" checked="checked" onchange="propit()"> Молочная&nbsp&nbsp <span id="propit0"></span> рублей<br>
+                <input type="checkbox" name="propit" value= "malin" onchange="propit()"> Малиновая&nbsp&nbsp <span id="propit1"></span> рублей<br>
+                <input type="checkbox" name="propit" value= "karamel" onchange="propit()"> Карамельная&nbsp&nbsp <span id="propit2"></span> рублей<br>
+                <input type="checkbox" name="propit" value= "egevic" onchange="propit()"> Ежевичная&nbsp&nbsp <span id="propit3"></span> рублей<br>
+                <input type="checkbox" name="propit" value= "kakao" onchange="propit()"> Какао&nbsp&nbsp <span id="propit4"></span> рублей
                 <h2>Выберите прослойку</h2>
-                <input type="checkbox" name="prosl" value= "yagod" checked="checked" > Ягодная <br>
-                <input type="checkbox" name="prosl" value= "meren" > Меренга <br>
-                <input type="checkbox" name="prosl" value= "nuts" > Орехи <br>
-                <input type="checkbox" name="prosl" value= "choko" > Шоколад <br>
-                <input type="checkbox" name="prosl" value= "oreo" > Орео 
-                
+                <input id="chkbox1" type="checkbox" name="prosl" value= "yagod" checked="checked" onchange="prosl()"> Ягодная&nbsp&nbsp <span id="prosl0"></span> рублей<br>
+                <input type="checkbox" name="prosl" value= "meren" onchange="prosl()"> Меренга&nbsp&nbsp <span id="prosl1"></span> рублей<br>
+                <input type="checkbox" name="prosl" value= "nuts" onchange="prosl()"> Орехи&nbsp&nbsp <span id="prosl2"></span> рублей<br>
+                <input type="checkbox" name="prosl" value= "choko" onchange="prosl()"> Шоколад&nbsp&nbsp <span id="prosl3"></span> рублей<br>
+                <input type="checkbox" name="prosl" value= "oreo" onchange="prosl()"> Орео&nbsp&nbsp <span id="prosl4"></span> рублей
             </div>
-            <div class="col-md-3">
-                <h2>Выберите крем</h2>
-                <input type="radio" name="krem" value= "chiz" checked="checked" > Чиз <br>
-                <input type="radio" name="krem" value= "zavar" > Заварной <br>
-                <input type="radio" name="krem" value= "sliv" > Сливочный 
-
+            <div class="col-md-4">
+                <div>
+                    <h2>Выберите крем</h2>
+                    <input type="radio" name="krem" value= "chiz" checked="checked" onchange="krem()"> Чиз&nbsp&nbsp <span id="krem0"></span> рублей<br>
+                    <input type="radio" name="krem" value= "zavar" onchange="krem()"> Заварной&nbsp&nbsp <span id="krem1"></span> рублей<br>
+                    <input type="radio" name="krem" value= "sliv" onchange="krem()"> Сливочный&nbsp&nbsp <span id="krem2"></span> рублей
+                </div>
+                <div>
+                    <img id="krem_img" src="img/krem/chis0.jpg">
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2>Выберите декор</h2>
-                <input type="radio" name="dekor" value= "mastika" checked="checked" > Мастика <br>
-                <input type="radio" name="dekor" value= "konf" > Шоколадная крошка и конфеты <br>
-                <input type="radio" name="dekor" value= "frukt" > Фруктовая нарезка <br>
-                <input type="radio" name="dekor" value= "mix" > Ягодный микс <br>
-                <input type="radio" name="dekor" value= "rose" > Крем роуз 
-
+                <input type="radio" name="dekor" value= "mastika" checked="checked" onchange="dekor()"> Мастика&nbsp&nbsp <span id="dekor0"></span> рублей<br>
+                <input type="radio" name="dekor" value= "konf" onchange="dekor()"> Шоколадная крошка и конфеты&nbsp&nbsp <span id="dekor1"></span> рублей<br>
+                <input type="radio" name="dekor" value= "frukt" onchange="dekor()"> Фруктовая нарезка&nbsp&nbsp <span id="dekor2"></span> рублей<br>
+                <input type="radio" name="dekor" value= "mix" onchange="dekor()"> Ягодный микс&nbsp&nbsp <span id="dekor3"></span> рублей<br>
+                <input type="radio" name="dekor" value= "rose" onchange="dekor()"> Крем роуз&nbsp&nbsp <span id="dekor4"></span> рублей 
             </div>
-            <div class="col-md-3">
-                <h2>Выберите подложку</h2>
-                <input type="radio" name="podlog" value= "karton" checked="checked" > Белый картон <br>
-                <input type="radio" name="podlog" value= "folga" > Золотая фольга <br>
-                <input type="radio" name="podlog" value= "print" > Цветной принт 
-
+            <div class="col-md-4">
+                <div>
+                    <h2>Выберите подложку</h2>
+                    <input type="radio" name="podlog" value= "karton" checked="checked" onchange="podlog()"> Белый картон&nbsp&nbsp <span id="podlog0"></span> рублей<br>
+                    <input type="radio" name="podlog" value= "folga" onchange="podlog()"> Золотая фольга&nbsp&nbsp <span id="podlog1"></span> рублей<br>
+                    <input type="radio" name="podlog" value= "print" onchange="podlog()"> Цветной принт&nbsp&nbsp <span id="podlog2"></span> рублей 
+                </div>
+                <div>
+                    <img id="podlog_img" src="img/podlog/wkar0.jpg">
+                </div>
             </div>
-            <div class="col-md-3">
-                <h2>Выберите упаковку</h2>
-                <input type="radio" name="pack" value= "plastic" checked="checked" > Пластиковая коробка <br>
-                <input type="radio" name="pack" value= "white" > Картонная белая коробка <br>
-                <input type="radio" name="pack" value= "color" > Картонная цветная коробка 
-
+            <div class="col-md-4">
+                <div>
+                    <h2>Выберите упаковку</h2>
+                    <input type="radio" name="box" value= "plastic" checked="checked" onchange="box()"> Пластиковая коробка&nbsp&nbsp <span id="box0"></span> рублей<br>
+                    <input type="radio" name="box" value= "white" onchange="box()"> Картонная белая коробка&nbsp&nbsp <span id="box1"></span> рублей<br>
+                    <input type="radio" name="box" value= "color" onchange="box()"> Картонная цветная коробка&nbsp&nbsp <span id="box2"></span> рублей 
+                </div>
+                <div>
+                    <img id="box_img" src="img/box/plastic0.jpg">
+                </div>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <h2>Условие заказа</h2>
-                <input type="radio" name="zakaz" value= "obych" checked="checked" > Обычный <br>
-                <input type="radio" name="zakaz" value= "sutki" > Срочный(за сутки)
-
-            </div>
-            <div class="col-md-3">
+                <input type="radio" name="zakaz" value= "obych" checked="checked" onchange="zakaz()"> Обычный <br>
+                <input type="radio" name="zakaz" value= "sutki" onchange="zakaz()"> Срочный(за сутки)&nbsp&nbsp <span id="zakaz1"></span> рублей
                 <h2>Доставка</h2>
-                <input type="radio" name="dost" value= "net" checked="checked" > Нет <br>
-                <input type="radio" name="dost" value= "da" > Да
-
+                <input type="radio" name="dost" value= "net" checked="checked" onchange="dost()"> Нет <br>
+                <input type="radio" name="dost" value= "da" onchange="dost()"> Да&nbsp&nbsp <span id="dost1"></span> рублей    
             </div>
-            
-            
-            
+            <div class="col-md-4">
+                <h2>Итоговая цена</h2>
+                <div id="cena"></div>
+                <h2>Торт в сборе</h2>
+                <img id="dekor_img" src="img/itog/mastika0.jpg">
+            </div>
         </div>
     </div>
     
