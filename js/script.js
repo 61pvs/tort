@@ -23,6 +23,22 @@ var podlogka;
 var upak;
 var zakazx;
 var dostx;
+var korg_t;
+var korg_m = ["Красный бархат", "Молочная девочка", "Мегашоколад", "Классический", "Морковный"];
+var propitka_t;
+var propitka_m = ["Пропитка Молочная", "Пропитка Малиновая", "Пропитка Карамельная", "Пропитка Ежевичная", "Пропитка Какао"];
+var prosloika_t;
+var prosloika_m = ["Прослойка Ягодная", "Прослойка Меренга", "Прослойка Орехи", "Прослойка Шоколад", "Прослойка Орео"];
+var cream_t;
+var cream_m = ["Крем Чиз", "Крем Заварной", "Крем Сливочный"];
+var dekorx_t;
+var dekorx_m = ["Декор Мастика", "Декор Шоколадная крошка и конфеты", "Декор Фруктовая нарезка", "Декор Ягодный микс", "Декор Крем роуз"];
+var podlogka_t;
+var podlogka_m = ["Подложка Белый картон", "Подложка Золотая фольга", "Подложка Цветной принт"];
+var upak_t;
+var upak_m = ["Упаковка Пластиковая коробка", "Упаковка Картонная белая коробка", "Упаковка Картонная цветная коробка"];
+var zakazx_t = "";
+var dostx_t = "";
 
 function ves(){
     koef=document.getElementById("ves").value/1000;
@@ -64,13 +80,14 @@ function load(){
     document.getElementById("box1").innerHTML=parseInt(100);
     document.getElementById("box2").innerHTML=parseInt(140);
     document.getElementById("zakaz1").innerHTML=parseInt(500);
-    document.getElementById("dost1").innerHTML=parseInt(250);
+    document.getElementById("dost1").innerHTML=parseInt(100);
 }
 function korgy(){
     var rarr=document.getElementsByName("korg");
     for (var i=0;i<5;i++){
         if(rarr[i].checked){
             korg=Number(document.getElementById("korgy"+i).innerText);
+            korg_t=korg_m[i];
             document.getElementById("korgy_img").src="img/korgy/red" + i + ".jpg"
         } 
     }
@@ -82,10 +99,8 @@ function propit(){
     for (var i=0;i<5;i++){
         if(rarr[i].checked){
             propitka+=Number(document.getElementById("propit"+i).innerText);
+            propitka_t=propitka_m[i];
         } 
-    }
-    if (propitka == 0){
-        document.getElementById("chkbox").checked = true;
     }
     stoim();
 }
@@ -95,10 +110,8 @@ function prosl(){
     for (var i=0;i<5;i++){
         if(rarr[i].checked){
             prosloika+=Number(document.getElementById("prosl"+i).innerText);
+            prosloika_t=prosloika_m[i];
         } 
-    }
-    if (prosloika == 0){
-        document.getElementById("chkbox1").checked = true;
     }
     stoim();
 }
@@ -107,6 +120,7 @@ function krem(){
     for (var i=0;i<3;i++){
         if(rarr[i].checked){
             cream=Number(document.getElementById("krem"+i).innerText);
+            cream_t=cream_m[i];
             document.getElementById("krem_img").src="img/krem/chis" + i + ".jpg"
         } 
     }
@@ -117,6 +131,7 @@ function dekor(){
     for (var i=0;i<5;i++){
         if(rarr[i].checked){
             dekorx=Number(document.getElementById("dekor"+i).innerText);
+            dekorx_t=dekorx_m[i];
             document.getElementById("dekor_img").src="img/itog/mastika" + i + ".jpg"
         } 
     }
@@ -127,6 +142,7 @@ function podlog(){
     for (var i=0;i<3;i++){
         if(rarr[i].checked){
             podlogka=Number(document.getElementById("podlog"+i).innerText);
+            podlogka_t=podlogka_m[i];
             document.getElementById("podlog_img").src="img/podlog/wkar" + i + ".jpg"
         } 
     }
@@ -137,6 +153,7 @@ function box(){
     for (var i=0;i<3;i++){
         if(rarr[i].checked){
             upak=Number(document.getElementById("box"+i).innerText);
+            upak_t=upak_m[i];
             document.getElementById("box_img").src="img/box/plastic" + i + ".jpg"
         } 
     }
@@ -147,6 +164,9 @@ function zakaz(){
     var rarr=document.getElementsByName("zakaz");
     if(rarr[1].checked){
         zakazx=Number(document.getElementById("zakaz1").innerText);
+        zakazx_t="Срочный заказ<br>";
+    }else{
+        zakazx_t="";
     }
     stoim();     
 }
@@ -155,10 +175,15 @@ function dost(){
     var rarr=document.getElementsByName("dost");
     if(rarr[1].checked){
         dostx=Number(document.getElementById("dost1").innerText);
+        dostx_t="Доставка";
+    }else{
+        dostx_t="";
     }
     stoim();     
 }
 function stoim(){
     cena = korg + propitka + prosloika + cream + dekorx + podlogka + upak + zakazx + dostx;
     document.getElementById("cena").innerHTML = cena + " рублей";
+    document.getElementById("config").innerHTML = "Вес "+koef+" кг"+"<br>"+korg_t+"<br>"+cream_t+"<br>"+propitka_t+"<br>"+
+        prosloika_t+"<br>"+dekorx_t+"<br>"+podlogka_t+"<br>"+upak_t+"<br>"+zakazx_t+dostx_t;
 }

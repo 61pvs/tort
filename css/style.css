@@ -1,16 +1,11 @@
 
 body{
-	margin: 1%;
-	padding:2%;
 	background-color: rgba(0, 119, 255, 0.2);
-	font-size: 85%;
+	font-size: 70%;
 }
-header, footer{
-  padding: 1%;
-  margin: 1%;
-}
+
 header h1{
-	font-size: 3rem;
+	font-size: 250%;
 	color:#3d3fc0b7;
 	font-weight: bold;
 	text-align: center;
@@ -29,4 +24,9 @@ footer {
 	color: rgb(47, 50, 255);
 	font-weight: bold;
 	font-size: 300%;
+}
+#config{
+	color: rgb(255, 47, 245);
+	font-weight: bold;
+	font-size: 150%;
 }
