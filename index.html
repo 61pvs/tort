@@ -11,107 +11,109 @@
 </head>
 <body>
     <header>
-        <h1> Конструктор торта</h1>
+        <h1> Торты в Ишимбае на заказ.</h1>
+        <h1> Тел. 8-917-XX-XX-XXX</h1>
       </header>
 
       <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-md-3">
+            <div>
                 <h2>Введите вес торта в граммах</h2>
                 <input id="ves" type="number" min="1000" max="5000" value="1000" step="100" class="ves" name="ves" onchange="ves()"> г.,вес
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 col-lg-3">
+            <div class="col-md-4 col-lg-3 col-xl-2">
                 <h2>корж</h2>
+ 
                 <input type="radio" name="korg" value= "red" checked="checked" onchange="korgy()"> Красный бархат&nbsp&nbsp <span id="korgy0"></span><br>
                 <input type="radio" name="korg" value= "milk" onchange="korgy()"> Молочная девочка&nbsp&nbsp <span id="korgy1"></span><br>
                 <input type="radio" name="korg" value= "mega" onchange="korgy()"> Мегашоколад&nbsp&nbsp <span id="korgy2"></span><br>
                 <input type="radio" name="korg" value= "classic" onchange="korgy()"> Классический&nbsp&nbsp <span id="korgy3"></span><br>
                 <input type="radio" name="korg" value= "mork" onchange="korgy()"> Морковный&nbsp&nbsp <span id="korgy4"></span>
+                <div>
+                <img id="korgy_img" src="img/korgy/red0.jpg" class="img-fluid img-thumbnail">
+                </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>корж</h2>
-                <img id="korgy_img" src="img/korgy/red0.jpg">
-            </div>    
-            <div class="col-md-4 col-lg-3">
-                <h2>пропитка</h2>
-                <input id="chkbox" type="checkbox" name="propit" value= "milk" checked="checked" onchange="propit()"> Молочная&nbsp&nbsp <span id="propit0"></span><br>
-                <input type="checkbox" name="propit" value= "malin" onchange="propit()"> Малиновая&nbsp&nbsp <span id="propit1"></span><br>
-                <input type="checkbox" name="propit" value= "karamel" onchange="propit()"> Карамельная&nbsp&nbsp <span id="propit2"></span><br>
-                <input type="checkbox" name="propit" value= "egevic" onchange="propit()"> Ежевичная&nbsp&nbsp <span id="propit3"></span><br>
-                <input type="checkbox" name="propit" value= "kakao" onchange="propit()"> Какао&nbsp&nbsp <span id="propit4"></span>
-            </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>прослойка</h2>
-                <input id="chkbox1" type="checkbox" name="prosl" value= "yagod" checked="checked" onchange="prosl()"> Ягодная&nbsp&nbsp <span id="prosl0"></span><br>
-                <input type="checkbox" name="prosl" value= "meren" onchange="prosl()"> Меренга&nbsp&nbsp <span id="prosl1"></span><br>
-                <input type="checkbox" name="prosl" value= "nuts" onchange="prosl()"> Орехи&nbsp&nbsp <span id="prosl2"></span><br>
-                <input type="checkbox" name="prosl" value= "choko" onchange="prosl()"> Шоколад&nbsp&nbsp <span id="prosl3"></span><br>
-                <input type="checkbox" name="prosl" value= "oreo" onchange="prosl()"> Орео&nbsp&nbsp <span id="prosl4"></span>
-            </div>
-            <div class="col-md-4 col-lg-3">
+            
+            <div class="col-md-4 col-lg-3 col-xl-2">
                     <h2>крем</h2>
                     <input type="radio" name="krem" value= "chiz" checked="checked" onchange="krem()"> Чиз&nbsp&nbsp <span id="krem0"></span><br>
                     <input type="radio" name="krem" value= "zavar" onchange="krem()"> Заварной&nbsp&nbsp <span id="krem1"></span><br>
                     <input type="radio" name="krem" value= "sliv" onchange="krem()"> Сливочный&nbsp&nbsp <span id="krem2"></span>
+                    <div>
+                        <img id="krem_img" src="img/krem/chis0.jpg" class="img-fluid img-thumbnail">
+                    </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>крем</h2>
-                <img id="krem_img" src="img/krem/chis0.jpg">
-            </div>
-            <div class="col-md-4 col-lg-3">
+            
+            <div class="col-md-4 col-lg-3 col-xl-2">
                     <h2>подложка</h2>
                     <input type="radio" name="podlog" value= "karton" checked="checked" onchange="podlog()"> Белый картон&nbsp&nbsp <span id="podlog0"></span><br>
                     <input type="radio" name="podlog" value= "folga" onchange="podlog()"> Золотая фольга&nbsp&nbsp <span id="podlog1"></span><br>
                     <input type="radio" name="podlog" value= "print" onchange="podlog()"> Цветной принт&nbsp&nbsp <span id="podlog2"></span> 
+                    <div>
+                        <img id="podlog_img" src="img/podlog/wkar0.jpg" class="img-fluid img-thumbnail">
+                    </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>подложка</h2>
-                <img id="podlog_img" src="img/podlog/wkar0.jpg">
-            </div>
-            <div class="col-md-4 col-lg-3">
+            
+            <div class="col-md-4 col-lg-3 col-xl-2">
                     <h2>упаковка</h2>
                     <input type="radio" name="box" value= "plastic" checked="checked" onchange="box()"> Пластиковая коробка&nbsp&nbsp <span id="box0"></span><br>
                     <input type="radio" name="box" value= "white" onchange="box()"> Картонная белая коробка&nbsp&nbsp <span id="box1"></span><br>
                     <input type="radio" name="box" value= "color" onchange="box()"> Картонная цветная коробка&nbsp&nbsp <span id="box2"></span>
+                    <div>
+                        <img id="box_img" src="img/box/plastic0.jpg" class="img-fluid img-thumbnail">
+                    </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>упаковка</h2>
-                <img id="box_img" src="img/box/plastic0.jpg">
-            </div>
-            <div class="col-md-4 col-lg-3">
+            
+            <div class="col-md-4 col-lg-3 col-xl-2">
                 <h2>декор</h2>
                 <input type="radio" name="dekor" value= "mastika" checked="checked" onchange="dekor()"> Мастика&nbsp&nbsp <span id="dekor0"></span><br>
                 <input type="radio" name="dekor" value= "konf" onchange="dekor()"> Шоколадная крошка и конфеты&nbsp&nbsp <span id="dekor1"></span><br>
                 <input type="radio" name="dekor" value= "frukt" onchange="dekor()"> Фруктовая нарезка&nbsp&nbsp <span id="dekor2"></span><br>
                 <input type="radio" name="dekor" value= "mix" onchange="dekor()"> Ягодный микс&nbsp&nbsp <span id="dekor3"></span><br>
                 <input type="radio" name="dekor" value= "rose" onchange="dekor()"> Крем роуз&nbsp&nbsp <span id="dekor4"></span> 
+                <div>
+                    <img id="dekor_img" src="img/itog/mastika0.jpg" class="img-fluid img-thumbnail">
+                </div>
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>декор</h2>
-                <img id="dekor_img" src="img/itog/mastika0.jpg">
-            </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>Условие заказа</h2>
+            
+            <div class="col-md-4 col-lg-3 col-xl-2">
+                <h2>пропитка</h2>
+                <input id="chkbox" type="checkbox" name="propit" value= "milk" checked="checked" onchange="propit()"> Молочная&nbsp&nbsp <span id="propit0"></span><br>
+                <input type="checkbox" name="propit" value= "malin" onchange="propit()"> Малиновая&nbsp&nbsp <span id="propit1"></span><br>
+                <input type="checkbox" name="propit" value= "karamel" onchange="propit()"> Карамельная&nbsp&nbsp <span id="propit2"></span><br>
+                <input type="checkbox" name="propit" value= "egevic" onchange="propit()"> Ежевичная&nbsp&nbsp <span id="propit3"></span><br>
+                <input type="checkbox" name="propit" value= "kakao" onchange="propit()"> Какао&nbsp&nbsp <span id="propit4"></span>
+                <h2>прослойка</h2>
+                <input id="chkbox1" type="checkbox" name="prosl" value= "yagod" checked="checked" onchange="prosl()"> Ягодная&nbsp&nbsp <span id="prosl0"></span><br>
+                <input type="checkbox" name="prosl" value= "meren" onchange="prosl()"> Меренга&nbsp&nbsp <span id="prosl1"></span><br>
+                <input type="checkbox" name="prosl" value= "nuts" onchange="prosl()"> Орехи&nbsp&nbsp <span id="prosl2"></span><br>
+                <input type="checkbox" name="prosl" value= "choko" onchange="prosl()"> Шоколад&nbsp&nbsp <span id="prosl3"></span><br>
+                <input type="checkbox" name="prosl" value= "oreo" onchange="prosl()"> Орео&nbsp&nbsp <span id="prosl4"></span>
+                <h2>условие заказа</h2>
                 <input type="radio" name="zakaz" value= "obych" checked="checked" onchange="zakaz()"> Обычный <br>
                 <input type="radio" name="zakaz" value= "sutki" onchange="zakaz()"> Срочный(за сутки)&nbsp&nbsp <span id="zakaz1"></span>
-            </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>Доставка</h2>
+                <h2>доставка</h2>
                 <input type="radio" name="dost" value= "net" checked="checked" onchange="dost()"> Нет <br>
                 <input type="radio" name="dost" value= "da" onchange="dost()"> Да&nbsp&nbsp <span id="dost1"></span>   
             </div>
-            <div class="col-md-4 col-lg-3">
-                <h2>Итоговая цена</h2>
-                <div id="cena"></div>
-            </div>            
         </div>
+        <div class="row justify-content-center">
+            <div>    
+                <h2>итоговая цена</h2>
+                <div id="cena"></div>
+            </div>
+        </div>            
+        
     </div>
     
     
       <footer>
-          <div>Конструктор торта</div>
+        <div class="social">
+            <h2>Ссылка на мой инстаграмм</h2>
+            <a class="instagram" href="#">Instagram</a>
+        </div>
       </footer>
 
     <!--<script src="js/bootstrap.min.js"></script> -->
