@@ -164,9 +164,9 @@ function zakaz(){
     var rarr=document.getElementsByName("zakaz");
     if(rarr[1].checked){
         zakazx=Number(document.getElementById("zakaz1").innerText);
-        zakazx_t="Срочный заказ<br>";
+        zakazx_t="Срочный заказ";
     }else{
-        zakazx_t="";
+        zakazx_t="Обычный заказ";
     }
     stoim();     
 }
@@ -177,13 +177,15 @@ function dost(){
         dostx=Number(document.getElementById("dost1").innerText);
         dostx_t="Доставка";
     }else{
-        dostx_t="";
+        dostx_t="Без доставки";
     }
     stoim();     
 }
 function stoim(){
     cena = korg + propitka + prosloika + cream + dekorx + podlogka + upak + zakazx + dostx;
     document.getElementById("cena").innerHTML = cena + " рублей";
-    document.getElementById("config").innerHTML = "Вес "+koef+" кг"+"<br>"+korg_t+"<br>"+cream_t+"<br>"+propitka_t+"<br>"+
-        prosloika_t+"<br>"+dekorx_t+"<br>"+podlogka_t+"<br>"+upak_t+"<br>"+zakazx_t+dostx_t;
+    document.getElementById("config").innerHTML = "Вес "+koef+" кг"+"<br>"+korg_t+" "+korg+"<br>"+
+        cream_t+" "+cream+"<br>"+propitka_t+" "+propitka+"<br>"+prosloika_t+" "+prosloika+"<br>"+
+        dekorx_t+" "+dekorx+"<br>"+podlogka_t+" "+podlogka+"<br>"+upak_t+" "+upak+"<br>"+
+        zakazx_t+" "+zakazx+"<br>"+dostx_t+" "+dostx;
 }
